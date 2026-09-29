@@ -9,7 +9,56 @@ import {
   Provenance
 } from '../types/antwin';
 
-const API_BASE = '/api';
+/**
+ * Resolves the HTTP API base URL.
+ * - Local development: defaults to '/api' (proxied via Vite to http://127.0.0.1:8000).
+ * - Production: uses VITE_API_BASE_URL (e.g. https://antwin-backend.onrender.com/api) or production fallback.
+ */
+export function getApiBaseUrl(): string {
+  const envUrl = (import.meta.env.VITE_API_BASE_URL || '').trim();
+  if (envUrl) {
+    const clean = envUrl.replace(/\/+$/, '');
+    return clean.endsWith('/api') ? clean : `${clean}/api`;
+  }
+  if (import.meta.env.PROD) {
+    return 'https://antwin-backend.onrender.com/api';
+  }
+  return '/api';
+}
+
+export const API_BASE = getApiBaseUrl();
+
+/**
+ * Resolves the WebSocket URL for live telemetry streaming.
+ * - Local development: connects to ws://127.0.0.1:8000/ws/stations/MAITRI
+ * - Production: connects to wss://antwin-backend.onrender.com/ws/stations/MAITRI
+ */
+export function getWebSocketUrl(path: string = '/ws/stations/MAITRI'): string {
+  const explicitWs = (import.meta.env.VITE_WS_BASE_URL || import.meta.env.VITE_WS_URL || '').trim();
+  const cleanPath = path.startsWith('/') ? path : `/${path}`;
+  if (explicitWs) {
+    return `${explicitWs.replace(/\/+$/, '')}${cleanPath}`;
+  }
+
+  const apiBase = (import.meta.env.VITE_API_BASE_URL || '').trim();
+  if (apiBase) {
+    try {
+      const url = new URL(apiBase.startsWith('http') ? apiBase : `https://${apiBase}`);
+      const wsProto = url.protocol === 'http:' ? 'ws:' : 'wss:';
+      return `${wsProto}//${url.host}${cleanPath}`;
+    } catch {
+      const wsProto = apiBase.startsWith('http:') ? 'ws:' : 'wss:';
+      const host = apiBase.replace(/^https?:\/\//, '').split('/')[0];
+      return `${wsProto}//${host}${cleanPath}`;
+    }
+  }
+
+  if (import.meta.env.PROD) {
+    return `wss://antwin-backend.onrender.com${cleanPath}`;
+  }
+
+  return `ws://127.0.0.1:8000${cleanPath}`;
+}
 
 export const antwinApi = {
   async getStations(): Promise<StationSummary[]> {

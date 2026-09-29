@@ -11,7 +11,7 @@ import { LogisticsView } from './pages/LogisticsView';
 import { AlertsView } from './pages/AlertsView';
 import { ReportsView } from './pages/ReportsView';
 import { SettingsView } from './pages/SettingsView';
-import { antwinApi } from './services/api';
+import { antwinApi, getWebSocketUrl } from './services/api';
 import {
   StationSummary,
   StationTwinState,
@@ -81,9 +81,7 @@ const AppContent: React.FC = () => {
 
   // WebSocket Live Streaming
   useEffect(() => {
-    const wsProto = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-    const wsHost = window.location.host;
-    const wsUrl = `${wsProto}//${wsHost}/ws/stations/MAITRI`;
+    const wsUrl = getWebSocketUrl('/ws/stations/MAITRI');
     
     let ws: WebSocket;
     try {
