@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --bg-space: #070d19;
+  --bg-surface: #0e192f;
+  --bg-surface-elevated: #13223f;
+  --bg-surface-card: #0c1830;
+  --bg-surface-card-hover: #142548;
+  
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-card: rgba(45, 85, 135, 0.35);
+  --border-active: #00d2ff;
+  --border-glow: rgba(0, 210, 255, 0.25);
+
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-accent: #38bdf8;
+
+  --accent-cyan: #00d2ff;
+  --accent-blue: #2563eb;
+  --accent-emerald: #10b981;
+  --accent-amber: #f59e0b;
+  --accent-red: #ef4444;
+  --accent-purple: #a855f7;
+  --accent-teal: #14b8a6;
+
+  --badge-live-bg: rgba(16, 185, 129, 0.15);
+  --badge-live-text: #34d399;
+  --badge-ref-bg: rgba(59, 130, 246, 0.18);
+  --badge-ref-text: #60a5fa;
+  --badge-sim-bg: rgba(168, 85, 247, 0.18);
+  --badge-sim-text: #c084fc;
+  --badge-der-bg: rgba(20, 184, 166, 0.18);
+  --badge-der-text: #2dd4bf;
+  
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-space);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-space);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Operational Glass & Cards */
+.antwin-panel {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+  position: relative;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.antwin-panel:hover {
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.antwin-panel-glow {
+  border-color: var(--border-glow);
+  box-shadow: 0 0 25px -5px rgba(0, 210, 255, 0.15);
+}
+
+/* Provenance Badges */
+.prov-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+.prov-badge:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.2);
+}
+.prov-badge.REPLAY {
+  background: rgba(14, 165, 233, 0.18);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+}
+.prov-badge.LIVE {
+  background: var(--badge-live-bg);
+  color: var(--badge-live-text);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+.prov-badge.REFERENCE {
+  background: var(--badge-ref-bg);
+  color: var(--badge-ref-text);
+  border: 1px solid rgba(59, 130, 246, 0.4);
+}
+.prov-badge.SIMULATED {
+  background: var(--badge-sim-bg);
+  color: var(--badge-sim-text);
+  border: 1px solid rgba(168, 85, 247, 0.4);
+}
+.prov-badge.DERIVED {
+  background: var(--badge-der-bg);
+  color: var(--badge-der-text);
+  border: 1px solid rgba(20, 184, 166, 0.4);
+}
+
+
+/* Operational Buttons */
+.btn-enter-maitri {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  padding: 0.65rem 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+}
+.btn-enter-maitri:hover {
+  filter: brightness(1.15);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
+  transform: translateY(-1px);
+}
+
+.btn-enter-bharati {
+  background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  padding: 0.65rem 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+}
+.btn-enter-bharati:hover {
+  filter: brightness(1.15);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+  transform: translateY(-1px);
+}
+
+.btn-run-sim {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.4);
+}
+.btn-run-sim:hover {
+  filter: brightness(1.15);
+  transform: translateY(-1px);
+}
+
+.btn-recalc {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+}
+.btn-recalc:hover {
+  filter: brightness(1.15);
+  transform: translateY(-1px);
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal-content {
+  background: #0f1c35;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 14px;
+  width: 100%;
+  max-width: 600px;
+  padding: 1.5rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(56, 189, 248, 0.15);
+  animation: modalIn 0.2s ease-out;
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Pulsing radar dot */
+@keyframes pulseGlow {
+  0% { transform: scale(0.95); opacity: 0.7; }
+  50% { transform: scale(1.15); opacity: 1; filter: drop-shadow(0 0 8px currentColor); }
+  100% { transform: scale(0.95); opacity: 0.7; }
+}
+
+.pulse-radar {
+  animation: pulseGlow 2.5s infinite ease-in-out;
+}
