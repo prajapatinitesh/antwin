@@ -1,0 +1,80 @@
+{
+  "station": "BHARATI",
+  "location": "Larsemann Hills, East Antarctica",
+  "coordinates": {
+    "latitude_deg": -69.4068,
+    "longitude_deg": 76.19525,
+    "elevation_m": 35.0
+  },
+  "dataset_name": "Bharati 7-Day Winter Operational Replay",
+  "provenance": {
+    "data_class": "REPLAY",
+    "source_archive": "NCPOR Antarctic Meteorological Observation Structure (IIG/IMD AWS Calibrated Profile)",
+    "baseline_years": "2012-2016",
+    "reconstruction_type": "Deterministic Historical-Style Winter Replay",
+    "verified_offline": true
+  },
+  "temporal_specification": {
+    "duration_days": 7,
+    "total_hourly_records": 168,
+    "start_timestamp": "2015-07-08T00:00:00Z",
+    "end_timestamp": "2015-07-14T23:00:00Z",
+    "time_resolution": "1 hour"
+  },
+  "weather_regimes": [
+    {
+      "regime_id": "A",
+      "name": "Period A: Stable Polar Cold",
+      "hours": "00-27",
+      "temp_range_c": [-18.5, -16.5],
+      "wind_range_knots": [12.0, 18.0],
+      "pressure_range_hpa": [982.0, 985.0],
+      "description": "Stable cold conditions with moderate ESE coastal drainage winds."
+    },
+    {
+      "regime_id": "B",
+      "name": "Period B: Temperature Decline",
+      "hours": "28-55",
+      "temp_range_c": [-24.8, -18.0],
+      "wind_range_knots": [10.0, 15.0],
+      "pressure_range_hpa": [984.0, 988.0],
+      "description": "Progressive nocturnal radiational cooling under clear polar skies."
+    },
+    {
+      "regime_id": "C",
+      "name": "Period C: Increasing Maritime Wind",
+      "hours": "56-83",
+      "temp_range_c": [-25.0, -21.0],
+      "wind_range_knots": [15.0, 38.0],
+      "pressure_range_hpa": [972.0, 987.0],
+      "description": "Approaching low-pressure system in Prydz Bay; maritime winds ramp sharply."
+    },
+    {
+      "regime_id": "D",
+      "name": "Period D: Strong Wind Event / Coastal Blizzard",
+      "hours": "84-111",
+      "temp_range_c": [-21.5, -18.5],
+      "wind_range_knots": [38.0, 52.0],
+      "pressure_range_hpa": [962.0, 972.0],
+      "description": "Severe maritime blizzard with wind gusts exceeding 50 knots; field access restricted."
+    },
+    {
+      "regime_id": "E",
+      "name": "Period E: Cold-Wind Chill Peak",
+      "hours": "112-139",
+      "temp_range_c": [-27.5, -22.5],
+      "wind_range_knots": [30.0, 38.0],
+      "pressure_range_hpa": [968.0, 980.0],
+      "description": "Dangerous simultaneous combination of severe sub-zero cold and sustained gale winds."
+    },
+    {
+      "regime_id": "F",
+      "name": "Period F: Synoptic Weather Recovery",
+      "hours": "140-167",
+      "temp_range_c": [-26.0, -17.0],
+      "wind_range_knots": [12.0, 28.0],
+      "pressure_range_hpa": [980.0, 986.0],
+      "description": "System passes out to sea; winds moderate and logistics accessibility window reopens."
+    }
+  ]
+}

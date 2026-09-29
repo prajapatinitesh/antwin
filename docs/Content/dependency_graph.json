@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    "WEATHER",
+    "ACCESS",
+    "HEATING",
+    "POWER",
+    "FUEL",
+    "ASSETS",
+    "FIELD_OPERATIONS",
+    "VEHICLES",
+    "LOGISTICS",
+    "SUPPLIES",
+    "SPARES",
+    "PERSONNEL",
+    "AUTONOMY"
+  ],
+  "edges": [
+    {"source": "WEATHER", "target": "ACCESS", "relationship": "constrains"},
+    {"source": "WEATHER", "target": "HEATING", "relationship": "increases_demand"},
+    {"source": "WEATHER", "target": "FIELD_OPERATIONS", "relationship": "constrains"},
+    {"source": "ACCESS", "target": "LOGISTICS", "relationship": "constrains"},
+    {"source": "HEATING", "target": "POWER", "relationship": "increases_load"},
+    {"source": "FIELD_OPERATIONS", "target": "VEHICLES", "relationship": "uses"},
+    {"source": "VEHICLES", "target": "FUEL", "relationship": "consumes"},
+    {"source": "POWER", "target": "FUEL", "relationship": "consumes"},
+    {"source": "ASSETS", "target": "POWER", "relationship": "can_reduce_availability"},
+    {"source": "LOGISTICS", "target": "SUPPLIES", "relationship": "replenishes"},
+    {"source": "LOGISTICS", "target": "SPARES", "relationship": "replenishes"},
+    {"source": "PERSONNEL", "target": "POWER", "relationship": "increases_load"},
+    {"source": "PERSONNEL", "target": "HEATING", "relationship": "increases_load"},
+    {"source": "SUPPLIES", "target": "AUTONOMY", "relationship": "supports"},
+    {"source": "SPARES", "target": "AUTONOMY", "relationship": "supports"},
+    {"source": "FUEL", "target": "AUTONOMY", "relationship": "constrains"},
+    {"source": "POWER", "target": "AUTONOMY", "relationship": "constrains"},
+    {"source": "ACCESS", "target": "AUTONOMY", "relationship": "constrains"}
+  ]
+}

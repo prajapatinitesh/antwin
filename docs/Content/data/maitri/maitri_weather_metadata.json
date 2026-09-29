@@ -1,0 +1,49 @@
+{
+  "dataset_name": "Maitri AWS Hourly Meteorological Replay Series",
+  "station_id": "MAITRI",
+  "station_name": "Maitri Research Station, Schirmacher Oasis",
+  "coordinates": {
+    "latitude": -70.76683367,
+    "longitude": 11.73078318,
+    "elevation_m": 117.0
+  },
+  "publisher": "National Polar Data Center (NPDC) / National Centre for Polar and Ocean Research (NCPOR)",
+  "source_archive": "NPDC AWS Historical Observation Portal (IMD-Maitri Series 2008-2014)",
+  "temporal_status": "HISTORICAL_OBSERVATION",
+  "data_class": "REPLAY",
+  "records_count": 168,
+  "start_timestamp": "2014-07-15T00:00:00",
+  "end_timestamp": "2014-07-21T23:00:00",
+  "duration_hours": 168,
+  "variables": [
+    {
+      "name": "temperature_c",
+      "unit": "\u00b0C",
+      "min": -35.3,
+      "max": -17.6
+    },
+    {
+      "name": "relative_humidity_pct",
+      "unit": "%",
+      "min": 34.0,
+      "max": 60.0
+    },
+    {
+      "name": "pressure_hpa",
+      "unit": "hPa",
+      "min": 952.0,
+      "max": 982.0
+    },
+    {
+      "name": "wind_speed_ms",
+      "unit": "m/s",
+      "min": 6.5,
+      "max": 27.5
+    },
+    {
+      "name": "wind_direction_cardinal",
+      "primary_sector": "ESE / SE (Antarctic catabatic drainage)"
+    }
+  ],
+  "quality_control": "Calibrated against published IMD Maitri annual climatological tables; 0 nulls, monotonic hourly sequence."
+}

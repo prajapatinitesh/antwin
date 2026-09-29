@@ -119,7 +119,16 @@ $RECYCLE.BIN/
 
 
 
-docs/
+
 scratch/
 scripts/
 improvement.md
+AGENTS.md
+
+docs/Mockups
+ARCHITECTURE.md
+DESIGN.md
+Initial-prompt.md
+PRD.md
+PROJECT_NOTE.md
+SRS.md

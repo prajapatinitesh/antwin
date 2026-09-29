@@ -1,0 +1,37 @@
+{
+  "dataset_name": "Maitri Winter Weather Replay Series",
+  "station_id": "MAITRI",
+  "station_name": "Maitri Research Station, Schirmacher Oasis",
+  "coordinates": {
+    "latitude": -70.7668,
+    "longitude": 11.7308,
+    "elevation_m": 117.0
+  },
+  "records_count": 168,
+  "duration_hours": 168,
+  "temporal_resolution": "1 hour",
+  "data_class": "REPLAY",
+  "source": "NPDC/NCPOR AWS Maitri Archive (Station 89514)",
+  "temporal_behavior": {
+    "Period_A": {
+      "hours": "0-24",
+      "description": "Stable polar cold (-20.5 to -17.6 C)"
+    },
+    "Period_B": {
+      "hours": "25-48",
+      "description": "Cooling trend and pressure fall (-21.5 to -24.5 C)"
+    },
+    "Period_C": {
+      "hours": "49-72",
+      "description": "Catabatic wind onset and gale warnings (18-24 m/s)"
+    },
+    "Period_D": {
+      "hours": "73-120",
+      "description": "Severe blizzard and deep freeze cold snap (-35.3 C, 27 m/s)"
+    },
+    "Period_E": {
+      "hours": "121-168",
+      "description": "Weather recovery and atmospheric stabilization"
+    }
+  }
+}

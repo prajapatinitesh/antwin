@@ -1,0 +1,65 @@
+[
+  {
+    "id": "SRC-NCPOR-MAITRI-PLANNING",
+    "title": "Maitri Station Planning Advisory",
+    "publisher": "NCPOR",
+    "data_class": "REFERENCE",
+    "temporal_status": "CURRENT_OR_VERSIONED",
+    "url": "https://ncpor.res.in/files/AL-03%20Planning%20Advisory%20-%20Maitri-2022.pdf",
+    "use": ["station", "capacity", "vehicles", "environmental_instruments", "logistics"]
+  },
+  {
+    "id": "SRC-NCPOR-BHARATI-ENGINEERING",
+    "title": "Bharati Onsite Operation, Maintenance & Repairs / Engineering Tender",
+    "publisher": "NCPOR",
+    "data_class": "REFERENCE",
+    "temporal_status": "HISTORICAL_ENGINEERING_REFERENCE",
+    "url": "https://ncpor.res.in/upload/tenders/TD-22062017.PDF",
+    "use": ["CHP", "fuel", "water", "wastewater", "BMS", "life_safety"]
+  },
+  {
+    "id": "SRC-NCPOR-EXPEDITION-2025",
+    "title": "Antarctic Expedition 2025 Planning Advisory",
+    "publisher": "NCPOR",
+    "data_class": "REFERENCE",
+    "temporal_status": "VERSIONED",
+    "url": "https://ncpor.res.in/files/AL-01%20Planning%20Advisory%20-%20Antarctic%20Expedition-2025_1.pdf",
+    "use": ["expedition", "access", "logistics", "capacity", "seasonality"]
+  },
+  {
+    "id": "SRC-NCPOR-DATA-PORTAL",
+    "title": "NCPOR/NPDC Antarctic Data Portal",
+    "publisher": "NCPOR/NPDC",
+    "data_class": "LIVE",
+    "temporal_status": "CURRENT",
+    "url": "https://www.npdc.ncpor.res.in/",
+    "use": ["environment", "AWS", "historical_environment"]
+  },
+  {
+    "id": "SRC-NCPOR-MAITRI-TELECONDITION",
+    "title": "Tele Condition Monitoring of Gensets at Maitri Station",
+    "publisher": "MoES/ESSDP metadata",
+    "data_class": "REFERENCE",
+    "temporal_status": "HISTORICAL",
+    "url": "https://incois.gov.in/essdp/ViewMetadata?fileid=c9ad6426-59ce-408c-a432-6497ad9220fd",
+    "use": ["asset_monitoring", "remote_condition_monitoring"]
+  },
+  {
+    "id": "SRC-NCPOR-MAITRI-II",
+    "title": "Maitri-II planning/clarification documents",
+    "publisher": "NCPOR",
+    "data_class": "REFERENCE",
+    "temporal_status": "PLANNED",
+    "url": "https://ncpor.res.in/upload/tenders/Maitri-II%20Clarifications_19_08_24.PDF",
+    "use": ["future_station_reference"]
+  },
+  {
+    "id": "SRC-BHARATI-WINTER-AWS-REPLAY",
+    "title": "Bharati 7-Day Winter Operational Replay (168h)",
+    "publisher": "NCPOR / IIG / IMD AWS Historical Observation Structure",
+    "data_class": "REPLAY",
+    "temporal_status": "HISTORICAL_REPLAY",
+    "url": "docs/Content/data/bharati/metadata.json",
+    "use": ["environment_replay", "thermal_model", "chp_dispatch", "water_balance", "mission_autonomy"]
+  }
+]

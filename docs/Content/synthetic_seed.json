@@ -1,0 +1,36 @@
+{
+  "seed": 26060,
+  "purpose": "Deterministic demo state. All operational telemetry is SIMULATED.",
+  "stations": {
+    "MAITRI": {
+      "temperature_c": -18.5,
+      "pressure_hpa": 987.2,
+      "humidity_pct": 71,
+      "wind_speed_ms": 8.4,
+      "population": 25,
+      "fuel_level_l": 142000,
+      "power_load_kw": 41,
+      "thermal_load_kw": 82,
+      "communication": "CONNECTED"
+    },
+    "BHARATI": {
+      "temperature_c": -14.2,
+      "pressure_hpa": 992.4,
+      "humidity_pct": 68,
+      "wind_speed_ms": 6.8,
+      "population": 47,
+      "fuel_level_l": 214500,
+      "power_load_kw": 126,
+      "thermal_load_kw": 108,
+      "communication": "CONNECTED"
+    }
+  },
+  "generator_health": {
+    "MAITRI-DG-01": 0.94,
+    "MAITRI-DG-02": 0.91,
+    "BHARATI-CHP-01": 0.97,
+    "BHARATI-CHP-02": 0.96,
+    "BHARATI-CHP-03": 0.95
+  },
+  "note": "Synthetic values are intentionally plausible but must never be presented as NCPOR live telemetry."
+}

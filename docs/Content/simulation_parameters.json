@@ -1,0 +1,88 @@
+{
+  "MAITRI": {
+    "station": "MAITRI",
+    "data_class": "SIMULATED",
+    "location": "Schirmacher Oasis",
+    "thermal_parameters": {
+      "indoor_target_temp_c": 18.0,
+      "base_heating_load_kwth": 35.0,
+      "convective_heat_loss_coeff_kw_per_c": 2.4,
+      "wind_chill_factor": 0.005,
+      "winter_occupancy": 25,
+      "occupancy_heat_gain_kw_per_person": 0.15
+    },
+    "electrical_parameters": {
+      "base_electrical_load_kwe": 38.0,
+      "scientific_laboratories_load_kwe": 12.0,
+      "habitation_services_kwe": 8.5,
+      "water_pumping_kwe": 5.2,
+      "wastewater_aeration_kwe": 4.8,
+      "heat_tracing_lake_pipeline_coeff": 0.45,
+      "prime_installed_capacity_kwe": 200.0,
+      "installed_alternators_kva": 250.0
+    },
+    "fuel_parameters": {
+      "total_storage_capacity_l": 300000.0,
+      "usable_fuel_fraction": 0.95,
+      "nominal_sfc_l_per_kwh": 0.265,
+      "high_load_sfc_l_per_kwh": 0.29,
+      "hydronic_boiler_efficiency_l_per_kwh_th": 0.072,
+      "baseline_fleet_warming_burn_l_day": 85.0
+    }
+  },
+  "BHARATI": {
+    "station": "BHARATI",
+    "data_class": "SIMULATED",
+    "location": "Larsemann Hills",
+    "thermal_parameters": {
+      "indoor_target_temp_c": 20.0,
+      "base_heating_load_kwth": 42.0,
+      "building_envelope_ua_kw_per_c": 1.85,
+      "maximum_documented_thermal_demand_kwth": 155.0,
+      "wind_chill_convective_factor": 0.006,
+      "winter_occupancy": 47,
+      "occupancy_heat_gain_kw_per_person": 0.14
+    },
+    "chp_electrical_parameters": {
+      "chp_units_count": 3,
+      "chp_unit_rating_kva": 100.0,
+      "chp_unit_rating_kwe": 80.0,
+      "installed_generation_kva": 300.0,
+      "installed_generation_kwe": 240.0,
+      "normal_lead_lag_running_units": 2,
+      "standby_units": 1,
+      "base_station_electrical_kwe": 28.0,
+      "laboratories_cleanrooms_kwe": 18.0,
+      "galley_kitchen_refrigeration_kwe": 14.0,
+      "hvac_fans_circulation_kwe_nominal": 12.0,
+      "quilty_bay_seawater_pumps_kwe": 6.5,
+      "ro_desalination_plant_kwe": 12.0,
+      "wastewater_mbr_treatment_kwe": 5.5,
+      "satcom_bms_it_kwe": 7.0,
+      "workshop_mobility_charging_kwe": 8.0
+    },
+    "fuel_parameters": {
+      "fuel_type": "JET A-1",
+      "total_storage_capacity_l": 300000.0,
+      "initial_simulated_inventory_l": 242000.0,
+      "nominal_chp_sfc_l_per_kwh": 0.255,
+      "degraded_chp_sfc_l_per_kwh": 0.295,
+      "thermal_heat_recovery_efficiency": 0.62
+    },
+    "water_parameters": {
+      "source": "Quilty Bay Seawater Intake (~12m depth)",
+      "pipeline_length_m": 300.0,
+      "ro_plant_capacity_l_per_day": 12000.0,
+      "remineralization_unit_status": "ONLINE",
+      "freshwater_storage_capacity_l": 45000.0,
+      "initial_storage_l": 38500.0,
+      "per_capita_daily_consumption_l": 110.0,
+      "winter_daily_consumption_l": 5170.0
+    },
+    "wastewater_parameters": {
+      "technology": "Membrane Bioreactor (MBR) Plant",
+      "treatment_capacity_l_per_day": 8000.0,
+      "effluent_recycling_target_pct": 65.0
+    }
+  }
+}

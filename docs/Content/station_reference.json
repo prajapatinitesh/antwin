@@ -1,0 +1,56 @@
+{
+  "Maitri": {
+    "data_class": "REFERENCE",
+    "known_reference": {
+      "location": "Schirmacher Oasis",
+      "winter_capacity": 25,
+      "summer_capacity": 65,
+      "latitude_deg": -70.7668,
+      "longitude_deg": 11.7308,
+      "elevation_m": 117
+    },
+    "historical_engineering_reference": {
+      "generator_sets": 10,
+      "generator_rating_kva": 62.5,
+      "typical_power_requirement_kw": [30, 50],
+      "historical_generator_fuel_l_per_day": [300, 400],
+      "heating_furnaces": 4,
+      "historical_heating_burner_l_per_hour": 10
+    },
+    "caveat": "Current exact generator configuration and private live telemetry are not publicly verified."
+  },
+  "Bharati": {
+    "data_class": "REFERENCE",
+    "known_reference": {
+      "location": "Larsemann Hills",
+      "winter_capacity": 47,
+      "additional_summer_emergency_capacity": 25,
+      "latitude_deg": -69.4068,
+      "longitude_deg": 76.19525,
+      "elevation_m": 35,
+      "chp_units": 3,
+      "chp_unit_rating_kva": 100,
+      "installed_generation_kva": 300,
+      "maximum_documented_thermal_demand_kwth": 155,
+      "fuel_type": "JET A-1",
+      "fuel_farm_capacity_documented_approx_l": 296000
+    },
+    "water": {
+      "source": "Quilty Bay seawater",
+      "intake_depth_m_approx": 12,
+      "pipeline_length_m_approx": 300,
+      "treatment": "RO + remineralization"
+    },
+    "caveat": "Reference configuration is not live BMS/SCADA telemetry."
+  },
+  "Maitri-II": {
+    "data_class": "REFERENCE",
+    "temporal_status": "PLANNED",
+    "summer_capacity": 140,
+    "winter_capacity": 40,
+    "generator_complex_count": 6,
+    "generation_kva_range": [600, 750],
+    "fuel_farm_capacity_l": 600000,
+    "caveat": "Future/planned infrastructure; never mix with current Maitri state."
+  }
+}
